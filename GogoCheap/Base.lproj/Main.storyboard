@@ -1,25 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oMA-jT-Ifw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Go Go Cheap-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" scalesPageToFit="YES" id="DBY-wA-4BE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="delegate" destination="vXZ-lx-hvc" id="p1s-mk-Wo7"/>
+                        </connections>
+                    </webView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Vm7-89-jDC"/>
+                        <barButtonItem enabled="NO" title="&lt;" id="NJT-fH-cWp">
+                            <connections>
+                                <action selector="didSelectBackButton:" destination="vXZ-lx-hvc" id="cSz-mV-dEL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Mzl-0n-8jw"/>
+                        <barButtonItem enabled="NO" title=">" id="eFg-0j-SfJ">
+                            <connections>
+                                <action selector="didSelectForwardButton:" destination="vXZ-lx-hvc" id="v3L-rB-Dn7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="LQh-QT-oOV"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Go Go Cheap" id="NmT-Hy-0KU">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="hKV-HR-VoW">
+                            <view key="customView" opaque="NO" contentMode="scaleToFill" id="aN1-OT-Gud">
+                                <rect key="frame" x="0.0" y="5" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9FJ-o5-aHc">
+                                        <rect key="frame" x="6" y="7" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityView" destination="aN1-OT-Gud" id="xMi-Kr-uPR"/>
+                        <outlet property="backButton" destination="NJT-fH-cWp" id="lmh-0R-qIW"/>
+                        <outlet property="forwardButton" destination="eFg-0j-SfJ" id="QUs-Da-JAF"/>
+                        <outlet property="webView" destination="DBY-wA-4BE" id="0z2-N3-207"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="869" y="797"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XJc-Zw-BDi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="oMA-jT-Ifw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="moM-cf-dxr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="oZz-Wx-Pjf">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="ITR-x2-xvM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G2I-dl-2KK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="797"/>
         </scene>
     </scenes>
 </document>
