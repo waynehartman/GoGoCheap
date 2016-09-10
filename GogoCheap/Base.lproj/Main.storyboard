@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oMA-jT-Ifw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oMA-jT-Ifw">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Go Go Cheap-->
@@ -10,9 +11,9 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <webView key="view" contentMode="scaleToFill" scalesPageToFit="YES" id="DBY-wA-4BE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
                             <outlet property="delegate" destination="vXZ-lx-hvc" id="p1s-mk-Wo7"/>
                         </connections>
@@ -25,7 +26,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Mzl-0n-8jw"/>
-                        <barButtonItem enabled="NO" title=">" id="eFg-0j-SfJ">
+                        <barButtonItem enabled="NO" title="&gt;" id="eFg-0j-SfJ">
                             <connections>
                                 <action selector="didSelectForwardButton:" destination="vXZ-lx-hvc" id="v3L-rB-Dn7"/>
                             </connections>
@@ -33,16 +34,17 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="LQh-QT-oOV"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Go Go Cheap" id="NmT-Hy-0KU">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="hKV-HR-VoW">
+                        <barButtonItem key="leftBarButtonItem" id="hKV-HR-VoW">
                             <view key="customView" opaque="NO" contentMode="scaleToFill" id="aN1-OT-Gud">
-                                <rect key="frame" x="0.0" y="5" width="33" height="33"/>
+                                <rect key="frame" x="16" y="5" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9FJ-o5-aHc">
-                                        <rect key="frame" x="6" y="7" width="20" height="20"/>
+                                        <frame key="frameInset" minX="6" minY="7" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </activityIndicatorView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </barButtonItem>
                     </navigationItem>
@@ -68,6 +70,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="oZz-Wx-Pjf">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
