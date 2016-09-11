@@ -28,7 +28,7 @@
 }
 
 - (NSURLRequest *)request {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://gogoair.com"]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://gogoinflight.com"]];
     [request setValue:USER_AGENT forHTTPHeaderField:@"User-Agent"];
     return request;
 }
